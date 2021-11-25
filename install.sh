@@ -2,11 +2,12 @@
 root() {
 user=`whoami`
 if [[ $user != 'root' ]]; then
-	echo "Please run as root\n"
+	echo "Please run as root"
 	exit
 fi
 }
 
+root
 printf "installing pyautogui....\n"
 pip install PyAutoGUI
 
@@ -23,6 +24,5 @@ chmod +x /usr/local/bin/pychat
 printf "\n\ntype 'pychat' anywhere on the terminal\n"
 }
 
-root
 access
 
