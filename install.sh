@@ -8,10 +8,10 @@ fi
 }
 
 printf "installing pyautogui....\n"
-#pip install PyAutoGUI
+pip install PyAutoGUI
 
 printf "installing random2....\n"
-#pip install random2
+pip install random2
 
 
 access() {
