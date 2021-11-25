@@ -1,0 +1,12 @@
+#!/bin/bash
+root() {
+user=`whoami`
+if [[ $user == 'root' ]]; then
+	echo "Please run as normal user"
+	exit
+else
+	python3 /usr/share/pychat_IHA.py
+fi
+}
+root
+
