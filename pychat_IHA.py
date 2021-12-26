@@ -13,20 +13,11 @@ def random(length):
     send = "".join(temp)
     return send
 
-def unlimited_type(length, message):
+def typer(length, message):
     if not message:
         temp = random(length)
     else:
         temp = message
-
-    pg.typewrite(temp)
-    pg.typewrite(["enter"])
-
-def limited_type(length, message):
-    if not message:
-        temp = random(length)
-    else:
-        temp=message
 
     pg.typewrite(temp)
     pg.typewrite(["enter"])
@@ -69,14 +60,14 @@ def pychat():
             pg.click()
             message = ''
             while True:
-                unlimited_type(length, message)
+                typer(length, message)
         else:
             print("click mouse curser where you type")
             sleep(5)
             pg.click()
             message=''
             for i in range(sent):
-                limited_type(length, message)
+                typer(length, message)
     elif choice == 2:
         try:
             message = input("\033[1;31mEnter message:\033[1;33m")
@@ -99,14 +90,14 @@ def pychat():
             pg.click()
             length=''
             while True:
-                unlimited_type(length, message)
+                typer(length, message)
         else:
             print("click mouse curser where you type")
             sleep(5)
             pg.click()
             length=''
             for i in range(sent):
-                limited_type(length, message)
+                typer(length, message)
     elif choice == 3:
         about()
 
@@ -115,9 +106,3 @@ def pychat():
 
 
 pychat()
-
-
-
-                
-                
-
